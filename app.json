@@ -2,12 +2,30 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/text/text"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "red",
+    "navigationBarTitleText": "美丽说",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "red",
+    "borderWidth": "none",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+       "iconPath": "imgs/ph_room.png",
+       "selectedIconPath": "imgs/ph_room1.png",
+       "text": "首页"
+    },{
+      "pagePath": "pages/contact/contact",
+       "iconPath": "imgs/ph_rn.png",
+       "selectedIconPath": "imgs/ph_rn1.png",
+       "text": "我的"
+    }]
   }
 }
