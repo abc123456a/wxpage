@@ -49,7 +49,7 @@
             <view></view>
 	    </view>
 	</view>
-    <navigator url="../index/index" class="go_home">
+    <navigator url="../address/address" class="go_home">
       <image class="prod_user_pcl" src="../../imgs/ph_room1.png"></image>
     </navigator>
     <view class="buy_bt">

@@ -3,76 +3,26 @@ view{
   display:block;
   width:100%;
 }
+.ad_hide{
+  display:none;
+}
 page{
-  display:block;
-  width:100%;
-  background-color: #ccc;
+  background:#e6e6e6;
 }
-.header{
-  background-color: #fff;
-  font-weight: blod;
-  text-align: center;
-  padding: 10px;
-}
-.container .bg_class{
-  width: 100%;
-  margin: 10px 0;
-  background-color: #fff;
-}
-.container .bg_class .bg_ph{
-  display: block;
-  margin: 15px auto;
-  height: 320px;
-}
-.bg_name{
-  display: inline;
-  margin-left: 24px;
-}
-.bg_name .bg_border{
-  display: inline;
-  font-size: 14px;
-  padding:6px;
-  color: #ccc;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-.bg_money{
-  color: red;
-  margin-left: 24px;
-  padding: 10px 0;
-}
-.container .bg_money .money{
-  color: #9b9b9b;
-  font-size: 14px;
-  text-decoration: line-through;
-}
-.bg_like{
-  margin-left: 24px;
-  padding: 10px 0;
-}
-
-.bg_like .bg_portrait{
-  width: 28px;
-  height: 28px;
+.add_b{
+  width:24px;
+  height:24px;
   float:left;
-  overflow: hidden;
+  margin-left:20px;
 }
-.bg_like .bg_portrait1{
-  width: 18px;
-  height: 18px;
-  padding-left: 50px;
+.fc_3{
+  color:#333;
+  font-size:12px;
 }
-.bg_like .bg_shopping{
-  display: inline;
-  margin-left: 100px;
-  border: 1px solid red;
-  color: red;
-  font-size: 14px;
-  padding: 6px;
-  border-radius: 6px;
-}
-.bg_like .bg_shopping .bg_portrait2{
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
+navigator{
+  width:100%;
+display:block;
+background:#fff;
+padding:16px;
+
 }
