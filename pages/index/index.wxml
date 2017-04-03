@@ -3,67 +3,26 @@
    <view class="header">
       ——"每日新款速递"——
    </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list1.jpg"></image>
+   <view class="bg_class" wx:for="{{items}}"  wx:key="{{item.index}}">
+      <image class="bg_ph" src="../../imgs/{{item.photo1}}"></image>
       <view class="bg_name">
          <text class="bg_border">亲测</text>
-         2017春夏韩版丝绒字母T恤
+         {{item.info}}
       </view>
       <view class="bg_money">
-       ￥60.00
+       {{item.money}}
         <text class="money">￥60.00</text>
       </view>
       <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
+         <image class="bg_portrait" src="../../imgs/{{item.photo2}}"></image>
+         <image class="bg_portrait" src="../../imgs/{{item.photo3}}"></image>
+         <image class="bg_portrait" src="../../imgs/{{item.photo4}}"></image>
+         <image class="bg_portrait1" src="../../imgs/{{item.photo5}}"></image>
+         <navigator class="bg_shopping" url="../shopping/shopping?index={{item.index}}">
+            <image class="bg_portrait2" src="../../imgs/{{item.photo6}}"></image>
             购买
          </navigator>
       </view>
    </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list2.png"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         圆环吊坠侧开叉吊带连衣裙
-      </view>
-      <view class="bg_money">
-       ￥106.16
-        <text class="money">￥106.16</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx2.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
-      </view>
-   </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list3.png"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         2017春季新款V领连衣裙
-      </view>
-      <view class="bg_money">
-       ￥130.77
-        <text class="money">￥130.77</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
-      </view>
-   </view>
+   
 </view>
