@@ -11,7 +11,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "red",
     "navigationBarTitleText": "美丽说",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle":"#fff",
     "enablePullDownRefresh": true
   },
   "tabBar": {

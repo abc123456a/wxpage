@@ -4,9 +4,35 @@ var app = getApp()
 Page({
   data: {
     motto: 'conttact页面',
-    userInfo: {}
+    userInfo: {},
+     background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    interval: 2000,
+    duration: 500,
+    nullHouse:true
   },
-  //事件处理函数
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay: function (e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange: function (e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange: function (e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  },
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
@@ -15,12 +41,18 @@ Page({
   onLoad: function () {
     console.log('onLoad')
     var that = this
-    //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
-      //更新数据
       that.setData({
         userInfo:userInfo
       })
     })
+  },
+  onUnload:function(){
+
+  },
+  clickBuy:function(){
+   this.setData({
+    nullHouse:false, //弹窗显示
+    }) 
   }
 })

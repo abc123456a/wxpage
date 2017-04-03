@@ -1,4 +1,64 @@
 <!--index.wxml-->
 <view class="container">
-  holle
+  <view class="page-section page-section-spacing swiper">
+	  <swiper indicator-dots="{{indicatorDots}}"
+	    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+	    <block wx:for="{{background}}" wx:key="*this">
+	      <swiper-item>
+	        <view class="swiper-item {{item}}"></view>
+	      </swiper-item>
+	    </block>
+	  </swiper>
+	</view>
+    <view class="prod_wp">
+       <view class="mg_b20">
+          <text class="prod_wp_t">2017春秋宽松休闲百搭双排扣风衣长款薄外套女</text>
+        </view>
+       <view>
+          <text class="prod_wp_pr">￥260.00</text>
+        </view>
+       <view class="page-head-line"></view>
+    </view>
+    <view>
+      <view class="bg_like">
+         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
+         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
+         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
+        <view class="prod_user_pc">
+          <image class="prod_user_pcl" src="../../imgs/ph_ai.png"></image>
+          <text class="prod_lnub">14人喜欢</text>
+       </view>
+       </view>
+      </view>
+      <view class="bg_c"></view>
+    <view class="page-section-spacing">
+	    <view class="flex-wrp" style="flex-direction:row;">
+	      <view class="flex-item demo-text-1">详情</view>
+	      <view class="flex-item demo-text-2">尺码信息</view>
+	      <view class="flex-item demo-text-3">购买帮助</view>
+	    </view>
+	    <view class="prod_conf_list">
+            <view>
+              <text></text>
+              <text></text>
+              <text></text>
+              <text></text>
+              <view></view>
+            </view>
+            <view></view>
+            <view></view>
+	    </view>
+	</view>
+    <navigator url="../index/index" class="go_home">
+      <image class="prod_user_pcl" src="../../imgs/ph_room1.png"></image>
+    </navigator>
+    <view class="buy_bt">
+      <button type="warn" class="go_buy" bindtap="clickBuy">立即购买</button>
+    </view>
+    <view class="myToast" hidden="{{nullHouse}}">暂无有关信息</view>
 </view>
+
+
+
+
+ 
