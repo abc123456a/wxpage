@@ -1,15 +1,18 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/address/address",
+    "pages/addressconf/addressconf",
     "pages/userinfo/userinfo",
-    "pages/shopping/shopping"
+    "pages/shopping/shopping",
+    "pages/buynow/buynow"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "red",
     "navigationBarTitleText": "美丽说",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#ccc",
@@ -27,5 +30,10 @@
        "selectedIconPath": "imgs/ph_rn1.png",
        "text": "我的"
     }]
-  }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }
