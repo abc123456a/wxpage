@@ -18,7 +18,7 @@
          <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
          <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
          <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../text/text">
+         <navigator class="bg_shopping" url="../shopping/shopping">
             <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
             购买
          </navigator>
@@ -39,7 +39,7 @@
          <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
          <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
          <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../text/text">
+         <navigator class="bg_shopping" url="../shopping/shopping">
             <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
             购买
          </navigator>
@@ -60,7 +60,7 @@
          <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
          <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
          <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../text/text">
+         <navigator class="bg_shopping" url="../shopping/shopping">
             <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
             购买
          </navigator>
