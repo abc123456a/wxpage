@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+   <view class="page-section-spacing">
+    <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view id="demo1" class="scroll-view-item demo-text-1"></view>
+      <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+      <view id="demo3" class="scroll-view-item demo-text-3"></view>
+    </scroll-view>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="usermotto">
+   <span style="font-size:14px;">
+	 <navigator url="../contact/contact">点击跳转到 contact 页面</navigator>
+	</span>
+  </view>
+</view>
