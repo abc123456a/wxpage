@@ -8,71 +8,47 @@ page{
   width:100%;
   background-color: #ccc;
 }
-.header{
-  background-color: #fff;
-  font-weight: blod;
-  text-align: center;
+.section{
+  background:#fff;
+  padding: 14px 0;
+  margin-bottom: 1px;
+  font-size: 14px;
+}
+.mer_dz{
+  margin-top:10px;
+}
+.section .pd_left{
+  padding-left: 14px;
+}
+.section .pd_left .ph_dy{
+  width: 20px;
+  height: 20px;
+  float:right;
+  overflow:hidden;
+  padding-right:18px;
+
+}
+.section .pd_left input{
+  display: inline-block;
+  overflow:visible;
+}
+.dp_block{
+  display: inline-block;
   padding: 10px;
 }
-.container .bg_class{
-  width: 100%;
-  margin: 10px 0;
-  background-color: #fff;
-}
-.container .bg_class .bg_ph{
-  display: block;
-  margin: 15px auto;
-  height: 320px;
-}
-.bg_name{
-  display: inline;
-  margin-left: 24px;
-}
-.bg_name .bg_border{
-  display: inline;
-  font-size: 14px;
-  padding:6px;
-  color: #ccc;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-.bg_money{
-  color: red;
-  margin-left: 24px;
-  padding: 10px 0;
-}
-.container .bg_money .money{
-  color: #9b9b9b;
-  font-size: 14px;
-  text-decoration: line-through;
-}
-.bg_like{
-  margin-left: 24px;
-  padding: 10px 0;
-}
-
-.bg_like .bg_portrait{
-  width: 28px;
-  height: 28px;
-  float:left;
-  overflow: hidden;
-}
-.bg_like .bg_portrait1{
-  width: 18px;
-  height: 18px;
-  padding-left: 50px;
-}
-.bg_like .bg_shopping{
-  display: inline;
-  margin-left: 100px;
-  border: 1px solid red;
-  color: red;
-  font-size: 14px;
-  padding: 6px;
-  border-radius: 6px;
-}
-.bg_like .bg_shopping .bg_portrait2{
-  width: 18px;
-  height: 18px;
+.pd_left image{
+  width: 20px;
+  height: 20px;
   vertical-align: middle;
+}
+.dw_bottom{
+  position:fixed;
+  bottom:0px;
+
+}
+button[type="warn"]{
+  color: #fff;
+  background-color: red;
+  margin:0px 10px;
+  border-radius:0px
 }

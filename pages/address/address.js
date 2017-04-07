@@ -3,7 +3,12 @@ var formatLocation = util.formatLocation
 Page({
   data: {
     userInfo: {},
+    list:[],
     hasLocation: false
+  },
+  onLoad:function(options){
+       debugger;
+       console.log(options);
   },
   getLocation: function () {
     var that = this

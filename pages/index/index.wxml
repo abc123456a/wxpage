@@ -18,7 +18,7 @@
          <image class="bg_portrait" src="../../imgs/{{item.photo3}}"></image>
          <image class="bg_portrait" src="../../imgs/{{item.photo4}}"></image>
          <image class="bg_portrait1" src="../../imgs/{{item.photo5}}"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping?index={{item.index}}">
+         <navigator class="bg_shopping" url="../shopping/shopping?index={{item.id}}">
             <image class="bg_portrait2" src="../../imgs/{{item.photo6}}"></image>
             购买
          </navigator>

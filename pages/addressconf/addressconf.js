@@ -6,7 +6,11 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    toView: 'green'
+    toView: 'green',
+    array: ['北京', '上海', '广州', '河南','河北', '东北', '山西', '陕西','广东', '黑龙江', '西藏', '云南'], 
+    array1: ['北京市', '上海市', '郑州市', '周口市','新郑市', '项城市', '鹿邑市', '鄢陵市','广东', '黑龙江', '西藏', '云南'], 
+    array2: ['朝阳区', '顺义区', '昌平区', '苹果园区'], 
+    index: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -23,6 +27,27 @@ Page({
       that.setData({
         userInfo:userInfo
       })
+    })
+  },
+  next: function(e){  
+    debugger;
+    wx.navigateTo({  
+      url: '/pages/address/address?list='+JSON.stringify(this.data.array),  
+    })  
+  },
+  bindPickerChange: function (e) {  
+    this.setData({  
+      index: e.detail.value  
+    })  
+  },
+  bindCityChange: function(e) {
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  bindDistrictChange: function(e) {
+    this.setData({
+      index: e.detail.value
     })
   },
    upper: function(e) {

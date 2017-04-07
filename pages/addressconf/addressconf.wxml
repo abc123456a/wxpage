@@ -1,69 +1,49 @@
 <!--index.wxml-->
 <view class="container">
-   <view class="header">
-      ——"每日新款速递"——
+   <view class="section dp_block">   
+    <view class="pd_left">  
+      收货人  <input placeholder="姓名"></input>
+    </view>    
    </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list1.jpg"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         2017春夏韩版丝绒字母T恤
-      </view>
-      <view class="bg_money">
-       ￥60.00
-        <text class="money">￥60.00</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
-      </view>
+   <view class="section dp_block">   
+       <view class="pd_left">  
+         联系电话  <input placeholder="手机"></input>
+       </view>    
    </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list2.png"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         圆环吊坠侧开叉吊带连衣裙
-      </view>
-      <view class="bg_money">
-       ￥106.16
-        <text class="money">￥106.16</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx2.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
-      </view>
+   <view class="section">  
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">  
+       <view class="pd_left">  
+         选择省  {{array[index]}}  <image class="ph_dy" src="../../imgs/ph_dy.png"></image>
+       </view>  
+     </picker>  
    </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list3.png"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         2017春季新款V领连衣裙
-      </view>
-      <view class="bg_money">
-       ￥130.77
-        <text class="money">￥130.77</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
-      </view>
+   <view class="section">  
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array1}}">  
+       <view class="pd_left">  
+         选择市  {{array1[index]}}  <image class="ph_dy" src="../../imgs/ph_dy.png"></image>
+       </view>  
+     </picker>  
+   </view> 
+   <view class="section">  
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array2}}">  
+       <view class="pd_left">  
+         选择地区  {{array2[index]}}  <image class="ph_dy" src="../../imgs/ph_dy.png"></image>
+       </view>  
+     </picker>  
+   </view> 
+   <view class="section dp_block">   
+       <view class="pd_left">  
+         详细信息  <input placeholder="街道门牌信息"></input>
+       </view>    
+   </view>
+   <view class="section mer_dz">   
+       <view class="pd_left">  
+         <image src="../../imgs/yuan.png"></image>  默认地址
+       </view>   
+   </view>
+   <view class="section dw_bottom">
+       <view class="btn-area">
+          <button type="warn" bindtap="next">确认</button>
+       </view>
    </view>
 </view>
