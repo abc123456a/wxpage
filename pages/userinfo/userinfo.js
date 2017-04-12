@@ -3,15 +3,30 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'conttact页面',
+    motto: '全部订单',
+    motto1: '我的喜欢',
+    selected:true,
+    selected1:false,
     userInfo: {}
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/address/address'
     })
   },
+   selected:function(e){
+        this.setData({
+            selected1:false,
+            selected:true
+        })
+    },
+    selected1:function(e){
+        this.setData({
+            selected:false,
+            selected1:true
+        })
+    },
   onLoad: function () {
     console.log('onLoad')
     var that = this

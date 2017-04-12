@@ -31,6 +31,7 @@ page{
 .section .pd_left input{
   display: inline-block;
   overflow:visible;
+  
 }
 .dp_block{
   display: inline-block;
@@ -51,4 +52,9 @@ button[type="warn"]{
   background-color: red;
   margin:0px 10px;
   border-radius:0px
+}
+.hidden_bar{
+  margin-top:10px;
+  padding-left:20px;
+  color:red
 }

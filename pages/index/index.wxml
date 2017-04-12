@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-   <view class="header">
+   <view class="header" bindtap="togenow">
       ——"每日新款速递"——
    </view>
    <view class="bg_class" wx:for="{{items}}"  wx:key="{{item.index}}">

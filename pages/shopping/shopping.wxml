@@ -32,30 +32,230 @@
       </view>
       <view class="bg_c"></view>
     <view class="page-section-spacing">
-	    <view class="flex-wrp" style="flex-direction:row;">
-	      <view class="flex-item demo-text-1">详情</view>
-	      <view class="flex-item demo-text-2">尺码信息</view>
-	      <view class="flex-item demo-text-3">购买帮助</view>
+	    <view class="flex-wrp" style="flex-direction:row;border-bottom:1px solid #eee;" bindtap="tab_vw">
+	      <view class="flex-item {{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">详情
+        </view>
+	      <view class="flex-item {{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">尺码信息</view>
+	      <view class="flex-item {{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">购买帮助</view>
 	    </view>
-	    <view class="prod_conf_list">
-            <view>
-              <text></text>
-              <text></text>
-              <text></text>
-              <text></text>
-              <view></view>
+      <view class="hd_vw {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+         <view class="hd_cont">
+            flex-wrap:主要说明子元素是否换行，有wrap、nowrap、wrap-reverse三种选择，默认是nowrap(没有换行),wrap是可以换行，wrap-reverse是指和wrap相反的方向展示换行数据。flex-direction:主要说明子元素展示方向，有row、row-reverse、column、column-reverse四中方向，其中row和row-reverse都标示横向展示，只不过这两个展示顺序相反；column和column-reverse都标示纵向展示，这两个也是展示顺序相反。justify-content:标示子元素在主轴线的对齐方式，有flex-start、flex-end、center、space-between、space-around五中方式，默认flex-start，这五个属性由以下一张图就能很好的说明其具体作用：
+         </view>
+         <view>穿着效果</view>
+         <view class="flex-wrp">
+            <view class="send_addr">
+              <view class="wrap_send">
+               <image class="bg_portrait" src="../../imgs/pro_add.png"></image>
+               <text class="hd_lagtxt">发货地点\n<text>广州省广州市</text></text>
+              </view>
             </view>
-            <view></view>
-            <view></view>
+            <view class="send_addr send_adby">
+              <view class="wrap_send">
+               <image class="bg_portrait" src="../../imgs/pro_by.png"></image>
+               <text class="hd_lagtxt">默认快递\n<text>韵达快递/包邮</text></text>
+              </view>
+            </view>
+         </view>
+	       <view class="prod_conf_list">
+            <view>
+              <view class="user-try"><span class="f_line lf"></span>买手试穿<span class="f_line lr"></span></view>
+              <view class="userinfo user_demo">
+                <image class="userinfo-avatar" src="../../imgs/ph_tx.png" background-size="cover"></image>
+              </view>
+              <view class="demo-user-infos">
+                身高<text class=""> 168cm</text> / 体重<text>47.0kg\n</text>
+                三围<text class=""> 78/63/68 / </text>试穿<text>均码</text>
+              </view>
+              <view class="pd_20">面料舒适贴肤，穿起来洋气得体哦~~</view>
+               <image class="wd_100" src="../../imgs/demo1_ups.jpg" background-size="cover"></image>
+              <view class="flex-wrp hg_100">
+                <image class="" src="../../imgs/demo1_upsm1.jpg"></image>
+                <image class="" src="../../imgs/demo1_upsm2.jpg"></image>
+                <image class="" src="../../imgs/demo1_upsm3.jpg"></image>
+              </view>
+            </view>
+            <view class="table">
+              <view class="tr bg-w">
+                <view class="th">试穿者</view>
+                <view class="th">身高/体重</view>
+                <view class="th">三围</view>
+                <view class="th">平时尺寸</view>
+                <view class="th">试穿尺码</view>
+                <view class="th ">试穿体验</view>
+              </view>
+              <block>
+                <view class="tr">
+                  <view class="td">鲜果</view>
+                  <view class="td">161/50</view>
+                  <view class="td">86/65/90</view>
+                  <view class="td">S</view>
+                  <view class="td">均码</view>
+                  <view class="td">宽松</view>
+                </view>
+                <view class="tr">
+                  <view class="td">橘色</view>
+                  <view class="td">171/50</view>
+                  <view class="td">88/65/90</view>
+                  <view class="td">L</view>
+                  <view class="td">均码</view>
+                  <view class="td">宽松</view>
+                </view>
+                <view class="tr">
+                  <view class="td">林丹</view>
+                  <view class="td">161/50</view>
+                  <view class="td">86/65/90</view>
+                  <view class="td">M</view>
+                  <view class="td">均码</view>
+                  <view class="td">宽松</view>
+                </view>
+              </block>
+            </view>
+            <view class="user-try"><span class="f_line lf"></span>买手亲测<span class="f_line lr"></span></view>
+            <view class="by_test">
+               <view class="by_test_list">
+                  <view class="by_test_listpw">
+                    <image class="by_test_listp" src="../../imgs/by_test1.jpg"></image>
+                  </view>
+                  <view class="by_test_listxt">
+                    <view class="text_title">不对称肩带设计<text class="waveline"></text></view>
+                    <view>吊带联谊群是开始就的看法就是考虑到经费是对方尽快落实地方桑德菲杰开始了地方~</view>
+                  </view>
+               </view>
+                <view class="by_test_list">
+                  <view class="by_test_listpw">
+                    <image class="by_test_listp" src="../../imgs/by_test2.jpg"></image>
+                  </view>
+                  <view class="by_test_listxt">
+                    <view class="text_title">原话装饰<text class="waveline"></text></view>
+                    <view>吊带联谊群是开始就的看法就是考虑到经费是对方尽快落实地方桑德菲杰开始了地方~</view>
+                  </view>
+               </view>
+                <view class="by_test_list">
+                  <view class="by_test_listpw">
+                    <image class="by_test_listp" src="../../imgs/by_test3.jpg"></image>
+                  </view>
+                  <view class="by_test_listxt">
+                    <view class="text_title">布拖县裁剪<text class="waveline"></text></view>
+                    <view style="font-family:sans-serif">吊带联谊群是开始就的看法就是考虑到经费是对方尽快落实地方桑德菲杰开始了地方~</view>
+                  </view>
+               </view>
+            </view>
+            <view class="user-try"><span class="f_line lf"></span>商品信息<span class="f_line lr"></span></view>
+            <view>
+               <view class="by_test_prow">
+                    <image class="by_test_listp" src="../../imgs/test_lips.png"></image>
+                    <image class="by_test_listp" src="../../imgs/test_proct.jpg"></image>
+                  </view>
+            </view>
+            <view class="pop_read_w">
+               <view class="user-try"><span class="f_line lf"></span>流行解读<span class="f_line lr"></span></view>
+            </view> 
+              <view class="">
+                <image class="by_test_listps" src="../../imgs/ph_list3.png"></image>
+               </view>
+             <view class="flex-wrp mgb_10" style="height:190px">
+                <image class="" src="../../imgs/demo1_upsm1.jpg"></image>
+                <image class="" src="../../imgs/demo1_upsm2.jpg"></image>
+              </view>
+            <view>
+              <view class="pdb_20 mgb_80">
+                <image class="by_test_listps" src="../../imgs/ph_list3.png"></image>
+                <image class="by_test_listps" src="../../imgs/ph_list1.jpg"></image>
+               </view>
+            </view>
 	    </view>
+    </view>
+    <view class="hd_vw leng_info {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+     <view class="table">
+          <block>
+            <view class="tr">
+              <view class="td">尺码</view>
+              <view class="td">均码</view>
+            </view>
+            <view class="tr">
+              <view class="td">胸围</view>
+              <view class="td">100</view>
+            </view>
+            <view class="tr">
+              <view class="td">腰围</view>
+              <view class="td">96</view>
+            </view>
+            <view class="tr">
+              <view class="td">臀围</view>
+              <view class="td">96</view>
+            </view>
+            <view class="tr">
+              <view class="td">裙长</view>
+              <view class="td">112</view>
+            </view>
+          </block>
+        </view>
+         <view class="bg_c"></view>
+        <view class="table">
+          <block>
+            <view class="tr">
+              <view class="td">尺码</view>
+              <view class="td">均码</view>
+            </view>
+            <view class="tr">
+              <view class="td">胸围</view>
+              <view class="td">100</view>
+            </view>
+            <view class="tr">
+              <view class="td">腰围</view>
+              <view class="td">96</view>
+            </view>
+            <view class="tr">
+              <view class="td">臀围</view>
+              <view class="td">96</view>
+            </view>
+            <view class="tr">
+              <view class="td">裙长</view>
+              <view class="td">112</view>
+            </view>
+          </block>
+        </view>
+    </view>
+    <view class="hd_vw {{tabArr.curBdIndex=='2'? 'active' : ''}}" style="height:300px">
+       <view>
+           士大夫立刻杀了对方收到付款收到付款时间地方松岛枫无人机；士大夫双方都巨畅销就；啊大家看到jfk；昆仑山地方就是的发生纠纷的克拉的发射点法；京东方
+       </view>
+    </view>
 	</view>
     <navigator url="../address/address" class="go_home">
       <image class="prod_user_pcl" src="../../imgs/ph_room1.png"></image>
     </navigator>
     <view class="buy_bt">
-      <button type="warn" class="go_buy" bindtap="clickBuy">立即购买</button>
+      <button type="warn" class="go_buy" bindtap="actionSheetTap">立即购买</button>
     </view>
-    <view class="myToast" hidden="{{nullHouse}}">暂无有关信息</view>
+    <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+       <view class="by_test_list tip_wrap">
+            <view class="by_test_listpw tip_out">
+              <image class="by_test_listp" src="../../imgs/by_test3.jpg"></image>
+            </view>
+            <view class="by_test_listxt">
+              <view class="text-wp">吊带联谊群是谊群是谊群是谊群是开始就的看法</view>
+              <view class="red">￥160</view>
+              <view class="mx_t">请选择款式 尺码</view>
+            </view>
+            <view class="tip_stitle">款式</view>
+            <view>
+               <text class="bg_t">灰色</text>
+               <text class="bg_t">杏色</text>
+               <text class="bg_t">黑色</text>
+            </view>
+            <view class="tip_stitle">尺码</view>
+            <view>
+               <text class="bg_t">均码</text>
+            </view>
+            <view class="tip_stitle">数量</view>
+            <view class="tip_adr">
+               <text class="bg_t">-</text><text class="bg_t">1</text><text class="bg_t">+</text>库存882件
+            </view>
+         </view>
+      <action-sheet-cancel class="cancel">确定</action-sheet-cancel>
+  </action-sheet>
 </view>
 
 

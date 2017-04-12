@@ -1,4 +1,22 @@
 <view class="container">
-   <view class="ad_hide"></view>
-   <navigator url="../addressconf/addressconf"><image src="../../imgs/plus_b.png" class="add_b"></image><text class="fc_3">新增收货地址</text></navigator>
+   <view class="ad_hide">
+     <view wx:for="{{userInfo}}"  wx:key="{{item.index}}">
+         <text class="ad_info">收货人：{{item.user}}{{item.pwd}}</text>
+         <view class="ad_location">
+            <image src="../../imgs/address.png"></image>
+            {{item.list1}}{{item.list2}}{{item.str}}
+         </view>
+         <view class="ad_mor">
+            <view class="ad_mor_left">
+               <image src="../../imgs/yuan.png"></image>
+               默认地址
+            </view>
+            <view class="ad_mor_right" data-alpha="{{index}}" bindtap="addChang">
+               <image src="../../imgs/bianji.png"></image>
+               编辑
+            </view>
+         </view>
+      </view>
+   </view>
+   <navigator url="../addressconf/addressconf" open-type="redirect"><image src="../../imgs/plus_b.png" class="add_b"></image><text class="fc_3">新增收货地址</text></navigator>
 </view>

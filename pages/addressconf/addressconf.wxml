@@ -2,12 +2,12 @@
 <view class="container">
    <view class="section dp_block">   
     <view class="pd_left">  
-      收货人  <input placeholder="姓名"></input>
+      收货人  <input type="text" name="user" bindblur="inputUser" placeholder="姓名" value="{{userInfo.user}}"></input>
     </view>    
    </view>
    <view class="section dp_block">   
        <view class="pd_left">  
-         联系电话  <input placeholder="手机"></input>
+         联系电话  <input name="password" bindinput="inputPwd" placeholder="手机" value="{{userInfo.pwd}}"></input>
        </view>    
    </view>
    <view class="section">  
@@ -33,13 +33,16 @@
    </view> 
    <view class="section dp_block">   
        <view class="pd_left">  
-         详细信息  <input placeholder="街道门牌信息"></input>
+         详细信息  <input name="street" bindblur="inputStr" placeholder="街道门牌信息" value="{{userInfo.str}}"></input>
        </view>    
    </view>
    <view class="section mer_dz">   
        <view class="pd_left">  
          <image src="../../imgs/yuan.png"></image>  默认地址
        </view>   
+   </view>
+   <view class="section hidden_bar" wx:if="{{eqs}}" bindtap="delete">   
+        删除地址   
    </view>
    <view class="section dw_bottom">
        <view class="btn-area">

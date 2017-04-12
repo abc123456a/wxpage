@@ -2,9 +2,18 @@
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class="userinfo-nickname">{{userInfo.nickName}}|<image src="../../imgs/address.png"></image></view>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <view class="{{selected?'red':'default'}}" bindtap="selected">{{motto}}</view>
+    <view class="{{selected1?'red':'default'}}" bindtap="selected1">{{motto1}}</view>
+  </view>
+  <view class="{{selected?'show':'hidden'}}">
+     <image src="../../imgs/live.png"></image>
+     <text>还没有订单呢，快去下单吧~</text>
+  </view>
+  <view class="{{selected1?'show':'hidden'}}">
+     <image src="../../imgs/live.png"></image>
+     <text>还没有喜欢的商品呢，快去逛逛吧~</text>
   </view>
 </view>

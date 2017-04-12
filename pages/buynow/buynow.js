@@ -6,14 +6,10 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    toView: 'green'
+    toView: 'green',
+    active_sele:true
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -53,6 +49,11 @@ Page({
   tapMove: function(e) {
     this.setData({
       scrollTop: this.data.scrollTop + 10
+    })
+  },
+  clk_selec:function(e){
+    this.setData({
+      active_sele:!(this.data.active_sele)
     })
   }
 })

@@ -1,69 +1,45 @@
 <!--index.wxml-->
 <view class="container">
-   <view class="header">
-      ——"每日新款速递"——
+   <view class="address">
+      <text>收货人:赵启虎 15101604016</text>
+      <view class="address_info">
+         <image src="../../imgs/address.png"></image>
+         北京市顺义区东兴小区
+      </view>
+      <image class="ph_dy" src="../../imgs/ph_dy.png"></image>
    </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list1.jpg"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         2017春夏韩版丝绒字母T恤
+   <view class="information">
+      <view class="information_lf">
+         <image src="../../imgs/ph_list1.jpg"></image>
+         <view class="ad_info">
+            <view>2017春夏季新款舒适百搭韩版丝绒字母T恤</view>
+            <view class="name">颜色: 灰色 尺码: 均码</view>
+         </view>
       </view>
-      <view class="bg_money">
-       ￥60.00
-        <text class="money">￥60.00</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
-      </view>
-   </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list2.png"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         圆环吊坠侧开叉吊带连衣裙
-      </view>
-      <view class="bg_money">
-       ￥106.16
-        <text class="money">￥106.16</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx2.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
+      <view class="information_rg">
+         <view class="old_money">￥60.00</view>
+         <view>￥60.00</view>
+         <view bindtap="clk_selec" class="{{active_sele?'show_ad':'hide_ad'}}">
+            ×1<image src="../../imgs/bianji.png"></image>
+         </view>
+         <view class="{{active_sele?'hide_ad':'show_ad'}}"><text>-</text><text>+</text></view>
       </view>
    </view>
-   <view class="bg_class">
-      <image class="bg_ph" src="../../imgs/ph_list3.png"></image>
-      <view class="bg_name">
-         <text class="bg_border">亲测</text>
-         2017春季新款V领连衣裙
-      </view>
-      <view class="bg_money">
-       ￥130.77
-        <text class="money">￥130.77</text>
-      </view>
-      <view class="bg_like">
-         <image class="bg_portrait" src="../../imgs/ph_tx.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx3.png"></image>
-         <image class="bg_portrait" src="../../imgs/ph_tx1.png"></image>
-         <image class="bg_portrait1" src="../../imgs/ph_ai.png"></image>
-         <navigator class="bg_shopping" url="../shopping/shopping">
-            <image class="bg_portrait2" src="../../imgs/ph_sp.png"></image>
-            购买
-         </navigator>
+   <view class="dispatching">
+      <text class="dispatching_lf">配送方式:</text>
+      <text class="dispatching_rg">全国包邮</text>
+   </view>
+   <view class="dispatching">
+      <text class="dispatching_lf">快递运费:</text>
+      <text class="dispatching_rg">￥0.00</text>
+   </view>
+   <view class="total">
+      <text class="total_rg" style="font-weight:bold">合计: ￥60.00</text>
+   </view>
+   <view class="bottom">
+      <view class="bottom_fixed">
+         <text class="ad_total">总计:</text> ￥60.00
+         <navigetor class="ad_pay">微信支付</navigetor>
       </view>
    </view>
 </view>

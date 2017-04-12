@@ -6,73 +6,131 @@ view{
 page{
   display:block;
   width:100%;
-  background-color: #ccc;
+  background-color: #f8f8f8;
 }
-.header{
-  background-color: #fff;
-  font-weight: blod;
-  text-align: center;
-  padding: 10px;
-}
-.container .bg_class{
+.address{
   width: 100%;
-  margin: 10px 0;
   background-color: #fff;
-}
-.container .bg_class .bg_ph{
-  display: block;
-  margin: 15px auto;
-  height: 320px;
-}
-.bg_name{
-  display: inline;
-  margin-left: 24px;
-}
-.bg_name .bg_border{
-  display: inline;
   font-size: 14px;
-  padding:6px;
-  color: #ccc;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding-left:22px;
+  padding-top:12px;
+  margin-bottom: 12px;
 }
-.bg_money{
-  color: red;
-  margin-left: 24px;
-  padding: 10px 0;
+.address .address_info{
+  margin: 10px 0;
+  font-size:12px;
+
 }
-.container .bg_money .money{
+.address image{
+  width: 12px;
+  height: 12px;
+}
+.address .ph_dy{
+  width: 20px;
+  height: 20px;
+  float: right;
+  overflow: hidden;
+  margin-right:16px;
+  margin-top:-40px;
+}
+.information{
+  width:100%;
+  background-color:#fff;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.information .information_lf{
+  display: inline-block;
+  width: 75%;
+}
+.information .information_lf image{
+  width:80px;
+  height: 80px;
+  float: left;
+  margin: 16px;
+  border-radius: 4px;
+}
+.information .information_lf .ad_info{
+  font-size: 13px;
+  margin-top: 16px;
+}
+.information .information_lf .ad_info .name{
   color: #9b9b9b;
-  font-size: 14px;
-  text-decoration: line-through;
+  font-size: 12px;
+  margin-top: 26px;
 }
-.bg_like{
-  margin-left: 24px;
-  padding: 10px 0;
+.information .information_rg{
+  display: inline-block;
+  width: 22%;
+  float: right;
+  margin-top: 16px;
+}
+.information .information_rg view{
+  margin-left:26px;
+  margin-bottom:12px;
 }
 
-.bg_like .bg_portrait{
-  width: 28px;
-  height: 28px;
-  float:left;
-  overflow: hidden;
+.information .information_rg image{
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin-right: 38px;
 }
-.bg_like .bg_portrait1{
-  width: 18px;
-  height: 18px;
-  padding-left: 50px;
+.information .information_rg .old_money{
+  color: #9b9b9b;
+  text-decoration: line-through;
 }
-.bg_like .bg_shopping{
-  display: inline;
-  margin-left: 100px;
-  border: 1px solid red;
-  color: red;
+.dispatching{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 1px;
   font-size: 14px;
-  padding: 6px;
-  border-radius: 6px;
+  color: #9b9b9b;
 }
-.bg_like .bg_shopping .bg_portrait2{
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
+.dispatching .dispatching_lf{
+  float: left;
+  margin: 12px 0 12px 16px;
+}
+.dispatching .dispatching_rg{
+  float: right;
+  margin: 12px 10px 12px 0;
+}
+.total{
+  width: 100%;
+  background-color: #fff;
+}
+.total .total_rg{
+  float: right;
+  margin: 12px 10px 12px 0;
+  font-size: 14px;
+  font-weigth: bold;
+  color: red;
+}
+.bottom{
+  weidth: 100%;
+  background-color:#fff;
+  position: fixed;
+  bottom: 0;
+}
+.bottom .bottom_fixed{
+  float: right;
+  width: 208px;
+  padding: 16px 0;
+  color: red;
+}
+.bottom .bottom_fixed .ad_total{
+  font-size: 12px;
+  color: #9b9b9b;
+  float: left;
+  margin-top: 2px;
+}
+.bottom .bottom_fixed .ad_pay{
+  border-radius: 4px;
+  background-color: red;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+.information .information_rg .hide_ad{
+  display:none;
 }

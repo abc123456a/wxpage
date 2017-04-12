@@ -75,6 +75,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  togenow: function(){
+    wx.navigateTo({
+      url: '../buynow/buynow'
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this

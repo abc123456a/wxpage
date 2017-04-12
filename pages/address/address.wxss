@@ -3,9 +3,6 @@ view{
   display:block;
   width:100%;
 }
-.ad_hide{
-  display:none;
-}
 page{
   background:#e6e6e6;
 }
@@ -13,7 +10,7 @@ page{
   width:24px;
   height:24px;
   float:left;
-  margin-left:20px;
+  margin-left:16px;
 }
 .fc_3{
   color:#333;
@@ -25,4 +22,47 @@ display:block;
 background:#fff;
 padding:16px;
 
+}
+.ad_hide{
+  background-color:#fff;
+  margin-bottom: 10px;
+}
+.ad_hide .ad_info{
+  font-size: 12px;
+  padding-left:16px;
+  padding-bottom: 8px;
+}
+.ad_hide .ad_location{
+  font-size: 12px;
+  padding:10px 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.ad_hide .ad_location image{
+  width: 12px;
+  height: 12px;
+  margin-top:2px;
+  float:left;
+  margin-right:8px;
+}
+.ad_mor{
+  font-size:12px;
+   overflow: hidden;
+}
+.ad_mor image{
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-top: -2px;
+  margin-right: 6px; 
+}
+.ad_mor .ad_mor_left{
+  float: left;
+  width: auto;
+  padding: 16px 16px;
+}
+.ad_mor .ad_mor_right{
+  float: right;
+  width: auto;
+  padding-right: 16px;
+  margin-top: 16px;
 }

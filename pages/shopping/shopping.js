@@ -3,6 +3,11 @@
 var app = getApp()
 Page({
   data: {
+    tabArr: { 
+     curHdIndex: 0, 
+     curBdIndex: 0 
+   },
+    modalHidden2: true,
     motto: 'conttact页面',
     userInfo: {},
      background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
@@ -60,7 +65,7 @@ Page({
     autoplay: true,
     interval: 2000,
     duration: 500,
-    nullHouse:true
+    actionSheetHidden:true
   },
   changeIndicatorDots: function (e) {
     this.setData({
@@ -108,9 +113,24 @@ Page({
   onUnload:function(){
 
   },
-  clickBuy:function(){
-   this.setData({
-    nullHouse:false, //弹窗显示
-    }) 
-  }
+  tab_vw:function(e){ 
+    var _datasetId=e.target.dataset.id; 
+    console.log("----"+_datasetId+"----"); 
+    var _obj={}; 
+    _obj.curHdIndex=_datasetId; 
+    _obj.curBdIndex=_datasetId; 
+    this.setData({ 
+     tabArr: _obj 
+  }); 
+ },
+  actionSheetTap:function(){
+    this.setData({
+      actionSheetHidden:!this.data.actionSheetHidden
+    })
+  },
+  actionSheetbindchange:function(){
+    this.setData({
+      actionSheetHidden:!this.data.actionSheetHidden
+    })
+  },
 })

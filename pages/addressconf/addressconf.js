@@ -6,11 +6,16 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
+    user: '',
+    pwd: '',
+    str: '',
     toView: 'green',
     array: ['北京', '上海', '广州', '河南','河北', '东北', '山西', '陕西','广东', '黑龙江', '西藏', '云南'], 
     array1: ['北京市', '上海市', '郑州市', '周口市','新郑市', '项城市', '鹿邑市', '鄢陵市','广东', '黑龙江', '西藏', '云南'], 
     array2: ['朝阳区', '顺义区', '昌平区', '苹果园区'], 
-    index: 0
+    index: 0,
+    from:"add",
+    eqs:""
   },
   //事件处理函数
   bindViewTap: function() {
@@ -18,22 +23,33 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
+  onLoad: function (options) {
+    this.setData({
+      eqs:options.list
+    })
+    //来自修改
+    if(options.list!=undefined){
+      wx.setNavigationBarTitle({ title: "修改地址"})
+      this.setData({
+         from:"change",
+         userInfo:(wx.getStorageSync('userInfo'))[options.list]
       })
+    }
+  },
+  inputUser:function(e){
+    this.setData({
+      user:e.detail.value
     })
   },
-  next: function(e){  
-    debugger;
-    wx.navigateTo({  
-      url: '/pages/address/address?list='+JSON.stringify(this.data.array),  
-    })  
+  inputPwd:function(e){
+    this.setData({
+      pwd:e.detail.value
+    })
+  },
+  inputStr:function(e){
+    this.setData({
+      str:e.detail.value
+    })
   },
   bindPickerChange: function (e) {  
     this.setData({  
@@ -79,6 +95,27 @@ Page({
     this.setData({
       scrollTop: this.data.scrollTop + 10
     })
-  }
+  },
+  delete: function(e){
+    var lod=wx.getStorageSync('userInfo');
+    lod.splice(this.data.eqs,1);
+    this.setData({
+            userInfo:lod
+          })
+    wx.setStorageSync('userInfo',lod);
+    wx.navigateTo({
+      url:'/pages/address/address',
+    })
+  },
+  next: function(e){  
+    var that = this
+    var urlT='/pages/address/address?list='+that.data.array[that.data.index]+"&list1="+that.data.array1[that.data.index]+"&list2="+that.data.array2[that.data.index]+"&user="+that.data.user+"&pwd="+that.data.pwd+"&str="+that.data.str;
+    if(that.data.eqs!=""){
+      urlT+="&eq="+that.data.eqs+"&from="+this.data.from
+    }
+    wx.navigateTo({  
+      url: urlT,
+    })  
+  },
 })
 
